@@ -265,3 +265,18 @@ docker-compose up -d # Lanzar la imagen
                 echo "<p>Usuario con ID $id eliminado.</p>";
                 }
             ```
+
+## Desplegar a DockerHub
+
+1. Construir la imagen de Docker
+    ```bash
+        docker build -t <tu_usuario>/apache-php-mysql ./apache-php
+    ```
+    - Le añadimos ./apache-php porque el Dockerfile esta en una subcarpeta y tenemos que añadirlo para que detecte el Dockerfile
+
+2. Subir la imagen a DockerHUb
+    ```bash
+        docker push <tu_usuario>/apache-php-mysql
+    ```
+
+3. Probar que se descarga el contenedor y listo
