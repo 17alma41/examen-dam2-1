@@ -140,6 +140,8 @@ apache-php-mysql
 docker-compose build # Construir la imagen
 
 docker-compose up -d # Lanzar la imagen
+
+docker-compose down # Parar todas las imagenes
 ```
 
 - Accedemos al http://localhost:8080 para comprobar que funciona
