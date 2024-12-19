@@ -11,8 +11,6 @@ El entorno que debes crear se compone de:
 
 Instalar Apache en Linux mediante `apt install apache2` y gestionar el servicio mediante `systemctl`.
 
-También deberíamos instalarnos docker con `snap install docker`.
-
 ## Sprint 1
 1. **Fork** al repositorio de datadiego/examen-dam2-1 .
     - Comprobación de que el repositorio funciona correctamente.
