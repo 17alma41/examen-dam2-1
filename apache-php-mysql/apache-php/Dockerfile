@@ -10,7 +10,7 @@ WORKDIR /var/www/html/
 # Copiar el archivo
 COPY index.php users.php ./
 # Copiar el archivo info.php y random.php
-# COPY info.php random.php ./
+# COPY random.php info.php ./
 
 # Cambiar los permisos para que sean accesibles por Apache
 # RUN chmod 644 /var/www/html/*.php
