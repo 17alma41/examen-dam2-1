@@ -1,0 +1,45 @@
+# Configuracion archivo .yml
+version: '3.8'
+
+services:
+  apache-php:
+    build: ./apache-php
+    ports:
+      - "8080:80"
+    networks:
+      - app-network
+    depends_on:
+      - mysql
+
+  mysql:
+    image: mysql:5.7
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpassword
+      MYSQL_DATABASE: mydb
+      MYSQL_USER: user
+      MYSQL_PASSWORD: userpassword
+    volumes:
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
+
+
+# Construir contenedores con docker compose
+# docker-compose build
+
+# Lanzar los contenedores
+# docker-compose up -d
+
+# Detener los contenedores 
+# docker-compose down
+
+# Construir imagen para subirla
+# docker build -t <tu_usuario>/apache-php-mysql .
+
+# SUbir la imagen
+# docker push <tu_usuario>/apache-php-mysql
+
