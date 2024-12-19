@@ -280,3 +280,6 @@ docker-compose up -d # Lanzar la imagen
     ```
 
 3. Probar que se descarga el contenedor y listo
+    ```bash
+        docker compose up
+    ```
